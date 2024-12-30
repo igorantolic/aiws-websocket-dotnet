@@ -1,0 +1,8 @@
+﻿<div class="h5">
+    @subtitle:
+    <span class="h2"> <b class=" badge bg-secondary badge">@title</b></span>
+</div>
+@code {
+    [Parameter] public string subtitle { get; set; } = "";
+    [Parameter] public string title { get; set; } = "";
+}

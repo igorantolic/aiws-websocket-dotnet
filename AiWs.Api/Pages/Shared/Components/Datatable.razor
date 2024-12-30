@@ -1,0 +1,21 @@
+﻿<script>
+    var table = $('#@tablename' ).DataTable({
+        paging: false,
+        layout: {
+            topStart: {
+                search: {
+                    placeholder: '...'
+                }
+            }, topEnd: null
+        },
+        oLanguage: {
+            sSearch:""// "Filter:&nbsp; "
+        }
+    });
+    table.on('draw', function () {
+        $('#rows').html('filtered rows: ' + table.page.info().recordsDisplay);
+    })
+</script>
+@code {
+    [Parameter] public string tablename { get; set; } = "main";
+}

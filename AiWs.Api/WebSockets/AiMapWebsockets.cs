@@ -6,13 +6,13 @@ public static class AiMapWebsockets
     {
         app.UseCors("AllowAnyOrigin");
         app.UseWebSockets();
-        app.MapGet("/", () => @"WebSocket server
-        test with 
-  file:///C:/proj/Websockets/AiWs/web-client/index.html
- API examples:   
- https://localhost:44340/api/ws/sensor-updated?sensorId=123
- https://localhost:44340/api/ws/sensor-status-updated?sensorId=123&statusJson={""sensorState"":""1001"", ""sensorId"":""S002""}
-");
+        //        app.MapGet("/", () => @"WebSocket server
+        //        test with 
+        //  file:///C:/proj/Websockets/AiWs/web-client/index.html
+        // API examples:   
+        // https://localhost:44340/api/ws/sensor-updated?sensorId=123
+        // https://localhost:44340/api/ws/sensor-status-updated?sensorId=123&statusJson={""sensorState"":""1001"", ""sensorId"":""S002""}
+        //");
         app.Map("/ws", async (HttpContext context, string sessionId, WebSocketAdapter ws) =>
         {
             if (context.WebSockets.IsWebSocketRequest)

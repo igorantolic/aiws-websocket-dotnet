@@ -1,0 +1,11 @@
+﻿@page
+@model AiWs.Api.Pages.Cache.ShopWithCacheModel
+@{
+}
+ShopWithCacheModel
+
+@foreach (var item in Model.items){
+    <div>
+        @item.Name: @item.Price
+    </div>
+}

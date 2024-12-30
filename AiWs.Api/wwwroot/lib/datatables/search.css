@@ -1,0 +1,31 @@
+﻿/* dataTables Search input box 
+    https://datatables.net/forums/discussion/69437/change-the-appearance-of-the-default-search-input-box
+
+*/
+
+.dt-search {
+    position: relative;
+    padding-bottom:8pt;
+    text-align:left !important;
+}
+
+.dt-search input {
+    width: 250px;
+    height: 32px;
+    background: #fcfcfc;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    _box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+    text-indent: 10px;
+    padding-left:12pt;
+}
+
+/*ijona povećala*/
+.dt-search .bi-search {
+    position: absolute;
+    top: 3px;
+    right: auto;
+    left: 12px;
+}
+
+

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web sockets</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link href="~/lib/datatables/datatables.css" rel="stylesheet" />
+    <link href="~/lib/datatables/search.css" rel="stylesheet" />
+    <link href="~/lib/datatables/buttons.bootstrap5.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="~/lib/selectize/css/selectize.bootstrap5.css" rel="stylesheet" />
+    <link href="~/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/icon.png">
+</head>
+<body data-bs-theme="dark">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/selectize/js/selectize.min.js"></script>
+    <script src="~/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.0.0/js/dataTables.buttons.js"></script>
+    <style>
+        .ai-menu li a{
+        font-size:10pt;
+        white-space:nowrap;
+        margin-left:8pt;
+        margin-right:8pt;
+        }
+    </style>
+    <partial name="_Header" />
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+@*     <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - rbhr_nb_services_discovery - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+ *@
+ 
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/dataTablesCustom.js"></script>
+    <footer class="footer fixed-bottom bg-black">
+        Igor
+    </footer>
+</body>
+</html>
