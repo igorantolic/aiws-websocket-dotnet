@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="page" id="homePage" style="display: block;">
+            <div class="home-container">
+                <div class="status" hidden></div>
+                <button id="connectButton" class="button" onclick="connect()">Join</button>
+            </div>
+        </div>
+        <div class="page" id="chatPage" style="display: none;">
+            <div class="status" hidden></div>
+            <div class="chat-container">
+
+                <div class="chat">
+                    <div class="users mobile-users-list">asdf</div>
+
+                    <div id="messages"></div>
+                    <div class="input-section">
+                        <div id="error-message" hidden></div>
+                        <input class="input" type="text" id="messageInput" placeholder="Type a message"
+                            value="sensorId=123">
+                        <button id="sendButton" class="button" onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+                <div class="users users-list"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+<!-- <script>
+    let uuid = self.crypto.randomUUID();
+    console.log(uuid); // for example "36b8f84d-df4e-4d49-b662-bcde71a8764f"
+</script> -->
+
+</html>
